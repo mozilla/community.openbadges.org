@@ -20,5 +20,4 @@
 			</div> <!-- .constrained -->
 		</header> <!-- #header -->
 
-		<div id="content" role="main">
-			<div class="constrained">
+

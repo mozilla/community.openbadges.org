@@ -14,10 +14,10 @@
 /* ===[ Core ]=============================================================== */
 
 body {
-	background: @footer-background;
+	background: #FFFFFF;
 	font-family: @light-font;
 	font-size: @base-font-size;
-	color: #F0F0F0;
+	color: #221f20;
 }
 
 h4 {
@@ -164,23 +164,12 @@ h4 {
 	margin-left: -14px;
 }
 
-#footer .footnote a {
-	background-position: 0 -80px;
-}
 
-#footer .support {
-	height: 80px;
-	line-height: 20px;
-	padding-top: 0;
 
-	img {
-		margin-top: -35px;
-		height: 80px;
-		vertical-align: middle;
-		display: inline-block;
-		margin-left: 1em;
-	}
-}
+
+
+
+ 
 
 /* ---[ Navigation ]--------------------------------------------------------- */
 
@@ -236,11 +225,183 @@ h4 {
 
 /* ===[ Main Content ]======================================================= */
 
-#content {
-	min-height: 300px;
-	padding: 5px 0 100px;
-	background: @main-background 50% 100% no-repeat;
+
+
+div[role=main]{
+
+	h1 {
+		font-size: 2.5em;
+		text-align: center;
+		color: #757575;
+	}
+
+	h2 {
+		font-size: 1.8em;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-weight: bold;
+		padding-top: 140px;
+	}
+
+	p.subheading {
+		max-width: 400px;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	nav {
+		max-width:700px;
+		margin: 0 auto;
+
+		a {
+			background: #efefef;
+			font-weight: bold;
+			padding-top: 140px;
+			padding-bottom: 10px;
+			.border-radius(7px);
+			width: 30%;
+			margin-right: 1%;
+			margin-left: 1%;
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+			color: @main-text-color;
+			font-size: 32px;
+
+			span {
+				display: block;
+				width: 15px;
+				height: 7px;
+				margin: 20px auto;
+			}
+
+			&.learn {
+				.at2x('../images/icon_learn.png', 90px, 102px, center, 30px, no-repeat, scroll);
+
+				span {
+					.at2x('../images/icon_arrow_dn_blue.png', 15px, 7px, center, center, no-repeat, scroll);
+				}
+			}
+
+			&.design {
+				.at2x('../images/icon_design.png', 90px, 102px, center, 30px, no-repeat, scroll);
+				span {
+					.at2x('../images/icon_arrow_dn_green.png', 15px, 7px, center, center, no-repeat, scroll);
+				}
+			}
+
+			&.code {
+				.at2x('../images/icon_code.png', 90px, 102px, center, 30px, no-repeat, scroll);
+
+				span {
+					.at2x('../images/icon_arrow_dn_orange.png', 15px, 7px, center, center, no-repeat, scroll);
+				}
+			}
+		} // end a
+	} // end nav
+
+	#learn {
+
+		border-top: 6px solid @ob-blue;
+
+		h2 {
+			.at2x('../images/icon_learn.png', 90px, 102px, center, 30px, no-repeat, scroll);
+		}
+
+		ul.links a {
+			.at2x('../images/icon_bullet_blue.png', 25px, 28px, 0, 10px, no-repeat, scroll);
+
+			span {
+				.at2x('../images/icon_arrow_right_blue.png', 6px, 12px, 0, 0, no-repeat, scroll);
+			}
+		}
+	}
+
+	#design {
+		border-top: 6px solid @ob-green;
+
+		h2 {
+			.at2x('../images/icon_design.png', 90px, 102px, center, 30px, no-repeat, scroll);
+		}
+
+		ul.links a {
+			.at2x('../images/icon_bullet_green.png', 25px, 28px, 0, 10px, no-repeat, scroll);
+
+			span {
+				.at2x('../images/icon_arrow_right_green.png', 6px, 12px, 0, 0, no-repeat, scroll);
+			}
+		}
+	}
+
+	#code {
+		border-top: 6px solid @ob-orange;
+
+		h2 {
+			.at2x('../images/icon_code.png', 90px, 102px, center, 30px, no-repeat, scroll);
+		}
+
+		ul.links a {
+			.at2x('../images/icon_bullet_orange.png', 25px, 28px, 0, 10px, no-repeat, scroll);
+
+			span {
+				.at2x('../images/icon_arrow_right_orange.png', 6px, 12px, 0, 0, no-repeat, scroll);
+			}
+		}
+	}
+
+	#news {
+		border-top: 6px solid #58585a;
+
+		h2 {
+			padding-top: 0;
+		}
+	}
+
+	section {
+		background: #FFFFFF;
+		padding: 50px 0 70px 0;
+	}
+
+	section:nth-child(even) {
+		.at2x('../images/fabric_1.png', 400px, 400px, top, left, repeat, scroll);
+	}
+
+	ul.links {
+		max-width: 650px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+
+		li {
+			list-style: none;
+
+			a {
+				display: inline-block;
+				width: 300px;
+				
+				color: @main-text-color;
+				text-decoration: none;
+				padding: 10px 15px 10px 40px;
+				position: relative;
+
+				span {
+					display: block;
+					width: 6px;
+					height: 12px;
+					position: absolute;
+					right: 0;
+					top: 20px;
+				}
+			}
+		}
+	}
+
 }
+
+
+
+
 
 .embellished #content {
 	background-image: url("../images/content-background.png");
@@ -250,6 +411,37 @@ h4 {
 
 .narrow #content .constrained {
 	max-width: 34em;
+}
+
+
+/* ===[ Footer ]======================================================= */
+
+#footer {
+
+	background: @footer-background;
+	color: white;
+
+	.footnote a {
+		background-position: 0 -80px;
+	}
+
+	.support {
+		height: 80px;
+		line-height: 20px;
+		padding-top: 0;
+
+		img {
+			margin-top: -35px;
+			height: 80px;
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 1em;
+		}
+	}
+
+	section {
+		background: none;
+	}
 }
 
 /* ===[ Components ]========================================================= */

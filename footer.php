@@ -1,6 +1,4 @@
 <?php if (IS_AJAX) return; ?>
-			</div> <!-- .constrained -->
-		</div> <!-- #content -->
 
 		<?php if (!!!get_post_meta($post->ID, 'hide_meta', true)):
 			if (is_active_sidebar('footer')): ?>

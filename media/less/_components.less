@@ -259,47 +259,57 @@ ul, ol {
 
 #meta {
 	background: #323538;
-	.linear-gradient(~"left, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0)");
+	//.linear-gradient(~"left, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0)");
 	background-size: 10px 10px;
 	background-position: 50% 50%;
+	padding-bottom: 15px;
 	min-height: 200px;
 	position: relative;
-
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		width: 100%;
-		height: @striped-border-size;
-	}
-
-	&::before {
-		top: 0;
-		background-image: -webkit-gradient(linear, top left, bottom left, from(rgba(0,0,0,0.33)), to(rgba(0,0,0,0)));
-		.linear-gradient(~"top, rgba(0,0,0,0.33), rgba(0,0,0,0)");
-	}
-
-	&::after {
-		bottom: 0;
-		background-image: -webkit-gradient(linear, bottom left, top left, from(rgba(0,0,0,0.33)), to(rgba(0,0,0,0)));
-		.linear-gradient(~"bottom, rgba(0,0,0,0.33), rgba(0,0,0,0)");
-	}
+	.inner-shadow (0, 5px, 10px, 0, 0.4);
 
 	.constrained {
-		max-width: 920px;
+		max-width: 950px;
 		padding: 0;
 		overflow: hidden;
 	}
 
 	section {
-		width: 33.33%;
+		color: white;
+		width: 25%;
 		float: left;
 		padding: 2em 10px;
+		font-size: .8em;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		position: relative;
+	}
+
+	form {
+		margin-top: 10px;
+	}
+
+	input, textarea {
+		width: 100%;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	textarea {
+		min-height: 60px;
+		font: inherit;
+	}
+
+	.twitter-follow-button {
+		margin-top: 10px;
+	}
+
+	#text-3 {
+		width: 20%;
+	}
+
+	#text-2 {
+		width: 30%;
 	}
 
 	h2 {
@@ -309,7 +319,7 @@ ul, ol {
 		font-size: 18px;
 		font-weight: bold;
 		margin: 0;
-		padding: 35px 0 0;
+		padding: 20px 0 0;
 	}
 
 	i {
@@ -357,10 +367,12 @@ ul, ol {
 @media all and (max-width: 800px) {
 	#meta {
 		padding-bottom: 2em;
+		padding-left: .5em;
+		padding-right: .5em;
 
 		section {
 			float: none;
-			width: auto;
+			width: auto !important;
 			max-width: 400px;
 			margin: 0 auto;
 			padding-bottom: 0;
