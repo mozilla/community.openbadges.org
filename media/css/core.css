@@ -462,7 +462,7 @@ div[role=main] #learn h2 {
 }
 div[role=main] #learn ul.links a {
   background-image: url('../images/icon_bullet_blue.png');
-  background-position: 0 10px;
+  background-position: 8px 7px;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
@@ -470,7 +470,7 @@ div[role=main] #learn ul.links a {
   div[role=main] #learn ul.links a {
     background-image: url('../images/icon_bullet_blue@2x.png');
     background-size: 25px 28px;
-    background-position: 0 10px;
+    background-position: 8px 7px;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -479,7 +479,7 @@ div[role=main] #learn ul.links a {
   div[role=main] #learn ul.links a {
     background-image: url('../images/icon_bullet_blue@2x.png');
     background-size: 25px 28px;
-    background-position: 0 10px;
+    background-position: 8px 7px;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -507,6 +507,9 @@ div[role=main] #learn ul.links a span {
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
+}
+div[role=main] #learn ul.links a:hover {
+  border: 2px solid #5fc9e5;
 }
 div[role=main] #design {
   border-top: 6px solid #b1cf37;
@@ -537,7 +540,7 @@ div[role=main] #design h2 {
 }
 div[role=main] #design ul.links a {
   background-image: url('../images/icon_bullet_green.png');
-  background-position: 0 10px;
+  background-position: 8px 7px;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
@@ -545,7 +548,7 @@ div[role=main] #design ul.links a {
   div[role=main] #design ul.links a {
     background-image: url('../images/icon_bullet_green@2x.png');
     background-size: 25px 28px;
-    background-position: 0 10px;
+    background-position: 8px 7px;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -554,7 +557,7 @@ div[role=main] #design ul.links a {
   div[role=main] #design ul.links a {
     background-image: url('../images/icon_bullet_green@2x.png');
     background-size: 25px 28px;
-    background-position: 0 10px;
+    background-position: 8px 7px;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -582,6 +585,9 @@ div[role=main] #design ul.links a span {
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
+}
+div[role=main] #design ul.links a:hover {
+  border: 2px solid #b1cf37;
 }
 div[role=main] #code {
   border-top: 6px solid #f48123;
@@ -612,7 +618,7 @@ div[role=main] #code h2 {
 }
 div[role=main] #code ul.links a {
   background-image: url('../images/icon_bullet_orange.png');
-  background-position: 0 10px;
+  background-position: 8px 7px;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
@@ -620,7 +626,7 @@ div[role=main] #code ul.links a {
   div[role=main] #code ul.links a {
     background-image: url('../images/icon_bullet_orange@2x.png');
     background-size: 25px 28px;
-    background-position: 0 10px;
+    background-position: 8px 7px;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -629,7 +635,7 @@ div[role=main] #code ul.links a {
   div[role=main] #code ul.links a {
     background-image: url('../images/icon_bullet_orange@2x.png');
     background-size: 25px 28px;
-    background-position: 0 10px;
+    background-position: 8px 7px;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
@@ -657,6 +663,9 @@ div[role=main] #code ul.links a span {
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
+}
+div[role=main] #code ul.links a:hover {
+  border: 2px solid #f48123;
 }
 div[role=main] #news {
   border-top: 6px solid #58585a;
@@ -699,22 +708,50 @@ div[role=main] ul.links {
 }
 div[role=main] ul.links li {
   list-style: none;
+  display: inline-block;
+  margin: 0 10px 15px 10px;
+  padding: 0;
+  width: 300px;
+  font-size: .9em;
 }
 div[role=main] ul.links li a {
-  display: inline-block;
-  width: 300px;
+  width: 240px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  text-align: left;
+  display: block;
   color: #221f20;
   text-decoration: none;
   padding: 10px 15px 10px 40px;
   position: relative;
+  -webkit-transition-property: all, -webkit-transform;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -moz-transition-property: all, -moz-transform;
+  -moz-transition-duration: 0.2s, 0.2s;
+  -ms-transition-property: all, -ms-transform;
+  -ms-transition-duration: 0.2s, 0.2s;
+  -o-transition-property: all, -o-transform;
+  -o-transition-duration: 0.2s, 0.2s;
+  transition-property: all, transform;
+  transition-duration: 0.2s, 0.2s;
+  animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 div[role=main] ul.links li a span {
   display: block;
   width: 6px;
   height: 12px;
   position: absolute;
-  right: 0;
-  top: 20px;
+  right: 10px;
+  top: 16px;
+}
+div[role=main] .video {
+  margin: 0 auto;
+  text-align: center;
 }
 .embellished #content {
   background-image: url("../images/content-background.png");

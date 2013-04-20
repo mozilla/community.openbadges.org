@@ -311,10 +311,14 @@ div[role=main]{
 		}
 
 		ul.links a {
-			.at2x('../images/icon_bullet_blue.png', 25px, 28px, 0, 10px, no-repeat, scroll);
+			.at2x('../images/icon_bullet_blue.png', 25px, 28px, 8px, 7px, no-repeat, scroll);
 
 			span {
 				.at2x('../images/icon_arrow_right_blue.png', 6px, 12px, 0, 0, no-repeat, scroll);
+			}
+
+			&:hover {
+				border: 2px solid @ob-blue;
 			}
 		}
 	}
@@ -327,10 +331,14 @@ div[role=main]{
 		}
 
 		ul.links a {
-			.at2x('../images/icon_bullet_green.png', 25px, 28px, 0, 10px, no-repeat, scroll);
+			.at2x('../images/icon_bullet_green.png', 25px, 28px, 8px, 7px, no-repeat, scroll);
 
 			span {
 				.at2x('../images/icon_arrow_right_green.png', 6px, 12px, 0, 0, no-repeat, scroll);
+			}
+
+			&:hover {
+				border: 2px solid @ob-green;
 			}
 		}
 	}
@@ -343,10 +351,14 @@ div[role=main]{
 		}
 
 		ul.links a {
-			.at2x('../images/icon_bullet_orange.png', 25px, 28px, 0, 10px, no-repeat, scroll);
+			.at2x('../images/icon_bullet_orange.png', 25px, 28px, 8px, 7px, no-repeat, scroll);
 
 			span {
 				.at2x('../images/icon_arrow_right_orange.png', 6px, 12px, 0, 0, no-repeat, scroll);
+			}
+
+			&:hover {
+				border: 2px solid @ob-orange;
 			}
 		}
 	}
@@ -375,26 +387,56 @@ div[role=main]{
 
 		li {
 			list-style: none;
+			display: inline-block;
+			margin: 0 10px 15px 10px;
+			padding: 0;
+			width: 300px;
+			font-size: .9em;
 
 			a {
-				display: inline-block;
-				width: 300px;
-				
+				width: 240px;
+				border: 2px solid rgba(0,0,0,0);
+				text-align: left;
+				display: block;
 				color: @main-text-color;
 				text-decoration: none;
 				padding: 10px 15px 10px 40px;
 				position: relative;
+				-webkit-transition-property: all, 
+		  		-webkit-transform;
+		  		-webkit-transition-duration: 0.2s, 0.2s;
+		     	-moz-transition-property: all, -moz-transform;
+		     	-moz-transition-duration: 0.2s, 0.2s;
+		     	-ms-transition-property: all, -ms-transform;
+		      	-ms-transition-duration: 0.2s, 0.2s;
+				-o-transition-property: all, -o-transform;
+				-o-transition-duration: 0.2s, 0.2s;
+				transition-property: all, transform;
+				transition-duration: 0.2s, 0.2s;
+				animation-timing-function:ease-out;
+				-moz-animation-timing-function:ease-out;
+				-webkit-animation-timing-function:ease-out;
+				-o-animation-timing-function:ease-out;
+				.border-radius(5px);
+
+
+				
 
 				span {
 					display: block;
 					width: 6px;
 					height: 12px;
 					position: absolute;
-					right: 0;
-					top: 20px;
+					right: 10px;
+					top: 16px;
 				}
 			}
 		}
+	}
+
+	.video {
+		margin: 0 auto;
+		text-align: center;
 	}
 
 }
