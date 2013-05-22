@@ -13,6 +13,8 @@
 
 /* ===[ Core ]=============================================================== */
 
+
+
 body {
 	background: #FFFFFF;
 	font-family: @light-font;
@@ -153,20 +155,28 @@ h4 {
 	padding: 28px 0;
 }
 
+#footer .support {
+	font-size: .8em;
+	width: 150px;
+	position: relative;
+
+	img {
+		position: absolute;
+		right: -100px;
+		top: 15px;
+	}
+}
+
 #home,
 #footer .footnote a {
 	display: block;
-	width: 300px;
+	width: 474px;
 	height: 80px;
 	background: url("../images/logo.png");
 	text-indent: -100%;
 	overflow: hidden;
 	margin-left: -14px;
 }
-
-
-
-
 
 
  
@@ -194,6 +204,17 @@ h4 {
 			margin-left: 1.5em;
 		}
 	}
+}
+
+#contact {
+	.error {
+		color: red;
+		margin-bottom: 15px;
+	}
+}
+
+#navigation {
+	margin-right: 20px;
 }
 
 @media all and (max-width: @full-content-width) {
@@ -233,22 +254,25 @@ div[role=main]{
 		font-size: 2.5em;
 		text-align: center;
 		color: #757575;
+		font-weight: normal;
 	}
 
 	h2 {
-		font-size: 1.8em;
+		font-size: 2em;
+		font-weight: normal;
 		text-align: center;
 		margin-top: 0;
-		margin-bottom: 20px;
-		font-weight: bold;
+		margin-bottom: 5px;
+		font-weight: normal;
 		padding-top: 140px;
 	}
 
 	p.subheading {
-		max-width: 400px;
+		max-width: 450px;
 		text-align: center;
 		margin: 0 auto;
 		margin-bottom: 40px;
+		font-size: 1.4em;
 	}
 
 	nav {
@@ -257,11 +281,11 @@ div[role=main]{
 
 		a {
 			background: #efefef;
-			font-weight: bold;
+			font-weight: normal;
 			padding-top: 140px;
 			padding-bottom: 10px;
 			.border-radius(7px);
-			width: 30%;
+			width: 29%;
 			margin-right: 1%;
 			margin-left: 1%;
 			display: inline-block;
@@ -269,6 +293,40 @@ div[role=main]{
 			text-align: center;
 			color: @main-text-color;
 			font-size: 32px;
+			-webkit-transition-property: all, 
+		  	-webkit-transform;
+		  	-webkit-transition-duration: 0.2s, 0.2s;
+		    -moz-transition-property: all, -moz-transform;
+		    -moz-transition-duration: 0.2s, 0.2s;
+		    -ms-transition-property: all, -ms-transform;
+		    -ms-transition-duration: 0.2s, 0.2s;
+			-o-transition-property: all, -o-transform;
+			-o-transition-duration: 0.2s, 0.2s;
+			transition-property: all, transform;
+			transition-duration: 0.2s, 0.2s;
+			animation-timing-function:ease-out;
+			-moz-animation-timing-function:ease-out;
+			-webkit-animation-timing-function:ease-out;
+			-o-animation-timing-function:ease-out;
+			border: 5px solid rgba(0,0,0,0);
+
+			&:hover {
+				-webkit-transform: scale(1.05);
+				transform: scale(1.05);
+				-moz-transform: scale(1.05);
+			}
+
+			&.learn:hover {
+				border: 5px solid @ob-blue;
+			}
+
+			&.design:hover {
+				border: 5px solid @ob-green;
+			}
+
+			&.code:hover {
+				border: 5px solid @ob-orange;
+			}
 
 			span {
 				display: block;
@@ -321,6 +379,10 @@ div[role=main]{
 				border: 2px solid @ob-blue;
 			}
 		}
+
+		a.top {
+			.at2x('../images/top_blue.png', 52px, 25px, 0, 0, no-repeat, scroll);
+		}
 	}
 
 	#design {
@@ -340,6 +402,10 @@ div[role=main]{
 			&:hover {
 				border: 2px solid @ob-green;
 			}
+		}
+
+		a.top {
+			.at2x('../images/top_green.png', 52px, 25px, 0, 0, no-repeat, scroll);
 		}
 	}
 
@@ -361,22 +427,152 @@ div[role=main]{
 				border: 2px solid @ob-orange;
 			}
 		}
+
+		a.top {
+			.at2x('../images/top_orange.png', 52px, 25px, 0, 0, no-repeat, scroll);
+		}
 	}
 
 	#news {
-		border-top: 6px solid #58585a;
+
+
+
+		&:after{
+			clear: left;
+		}
+
+		border-top: 6px solid @ob-navy;
+
+		a {
+			color: @ob-navy;
+		}
 
 		h2 {
 			padding-top: 0;
+		}
+
+		h3 {
+			padding-top: 0;
+			margin-top: 0;
+			margin-bottom: 15px;
+			border-bottom: 1px solid black;
+			padding-bottom: 15px;
+			font-size: 1.6em;
+		}
+
+		a.top {
+			.at2x('../images/top_navy.png', 52px, 25px, 0, 0, no-repeat, scroll);
+		}
+
+		.blog {
+
+			-webkit-box-shadow: 3px 5px 15px 5px rgba(0,0, 0, 0.2);
+			-moz-box-shadow: 3px 5px 15px 5px rgba(0,0, 0, 0.2);
+			box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+			padding: 40px;
+			width: 500px;
+			float: left;
+			margin-right: 30px;
+
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style: none;
+				border-bottom: 1px solid black;
+				padding-bottom: 20px;
+				padding-top: 20px;
+				padding-left: 150px;
+				position: relative;
+				font-size: .9em;
+
+				a {
+					font-size: 1.1em;
+				}
+
+				&:first-child {
+					padding-top: 0;
+
+					small {
+						top: 0;
+					}
+				}
+
+				&:last-child{
+					border-bottom: 0;
+					padding-bottom: 0;
+				}
+
+				small {
+					position: absolute;
+					left: 0;
+					top: 20px;
+					font-weight: bold;
+					font-size: .9em;
+					width: 100px;
+					text-transform: uppercase;
+					padding-right: 20px;
+				}
+			}
+		}
+
+		.tweets {
+			-webkit-box-shadow: 3px 5px 15px 5px rgba(0,0, 0, 0.2);
+			-moz-box-shadow: 3px 5px 15px 5px rgba(0,0, 0, 0.2);
+			box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+			padding: 40px;
+			width: 250px;
+			float: left;
+
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style: none;
+				border-bottom: 1px solid black;
+				padding-bottom: 20px;
+				padding-top: 20px;
+				font-size: .9em;
+
+				&:first-child {
+					padding-top: 0;
+
+					small {
+						top: 0;
+					}
+				}
+
+				&:last-child{
+					border-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
+
+
 		}
 	}
 
 	section {
 		background: #FFFFFF;
 		padding: 50px 0 70px 0;
+		position: relative;
+
+		a.top {
+			position: absolute;
+			display: block;
+			width: 104px;
+			height: 50px;
+			top: 0;
+			right: 0;
+		}
 	}
 
 	section:nth-child(even) {
+		background-image: url(../images/fabric_1.png);
 		.at2x('../images/fabric_1.png', 400px, 400px, top, left, repeat, scroll);
 	}
 
@@ -388,7 +584,7 @@ div[role=main]{
 		li {
 			list-style: none;
 			display: inline-block;
-			margin: 0 10px 15px 10px;
+			margin: 0 4px 15px 3px;
 			padding: 0;
 			width: 300px;
 			font-size: .9em;
@@ -399,6 +595,7 @@ div[role=main]{
 				text-align: left;
 				display: block;
 				color: @main-text-color;
+				background: rgba(0,0,0,0.1);
 				text-decoration: none;
 				padding: 10px 15px 10px 40px;
 				position: relative;
@@ -419,7 +616,11 @@ div[role=main]{
 				-o-animation-timing-function:ease-out;
 				.border-radius(5px);
 
-
+				&:hover{
+					-webkit-transform: scale(1.02);
+					transform: scale(1.02);
+					-moz-transform: scale(1.02);
+				}
 				
 
 				span {
@@ -439,7 +640,21 @@ div[role=main]{
 		text-align: center;
 	}
 
-}
+	.column50 {
+		width: 46%;
+		display: inline-block;
+
+		&:nth-child(even) {
+			padding-left: 3%;
+		}
+
+		&:nth-child(odd) {
+			padding-right: 3%;
+		}
+	}
+
+
+} // end div role main
 
 
 

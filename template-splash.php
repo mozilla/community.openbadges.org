@@ -10,7 +10,7 @@ if (have_posts()) {
 		the_content();
 	}
 }?>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		// if url starts with a hash, animate scroll

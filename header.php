@@ -1,4 +1,4 @@
-<?php if (IS_AJAX) return; ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 		<!--[if lt IE 9]><script src="./media/js/html5shiv.js"></script><![endif]-->
+		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

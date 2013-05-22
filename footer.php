@@ -1,5 +1,3 @@
-<?php if (IS_AJAX) return; ?>
-
 		<?php if (!!!get_post_meta($post->ID, 'hide_meta', true)):
 			if (is_active_sidebar('footer')): ?>
 				<aside id="meta">
@@ -19,7 +17,7 @@
 				</section>
 				<section>
 					<p class="support">
-						With support and<br>collaboration from
+						With support and collaboration from
 						<a href="http://www.macfound.org"><img alt="the MacArthur Foundation" src="<?php echo get_stylesheet_directory_uri(); ?>/media/images/partners/MacArthur_logo.png"></a>
 					</p>
 					<nav class="secondary">

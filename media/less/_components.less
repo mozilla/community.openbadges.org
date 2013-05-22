@@ -304,12 +304,12 @@ ul, ol {
 		margin-top: 10px;
 	}
 
-	#text-3 {
-		width: 20%;
+	.widget:nth-child(2) {
+		width: 30%;
 	}
 
-	#text-2 {
-		width: 30%;
+	.widget:nth-child(3) {
+		width: 20%;
 	}
 
 	h2 {
@@ -378,4 +378,116 @@ ul, ol {
 			padding-bottom: 0;
 		}
 	}
+
+	#home, #footer .footnote a {
+
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 300px;
+		height: 50px;
+	}
+
+	#footer .footnote a {
+		background-position: 0 -50px;
+	}
+
+	div[role=main] {
+		
+		h1 {
+			font-size: 1.8em;
+		}
+
+		.column50 {
+			width: 100%;
+			padding: 0 !important;
+		}
+
+		ul.links {
+			text-align: center;
+		}
+
+		#news {
+			.blog li {
+
+				padding-left: 0;
+
+				small {
+					position: relative;
+					display: block;
+				}
+			}
+		}
+
+		nav {
+			text-align: center;
+			a {
+				
+				width: 120px;
+				margin-bottom: 20px;
+				background-size: 60%;
+				font-size: 1.1em;
+				padding-top: 140px;
+			}
+		}
+
+
+
+		.video iframe {
+			width: 100%;
+		}
+
+		#news {
+			.blog, .tweets {
+				width: 70%;
+				float: none;
+			}
+
+			.blog {
+				margin-bottom: 30px;
+			}
+		}
+
+		ul.links {
+
+			margin: 0;
+			padding: 0;
+		
+
+			li {
+
+				display: block;
+				width: 80%;
+				padding-right: 0;
+				padding-left: 0;
+				margin-left: 0;
+				margin-right: 0;
+
+				a {
+					width: 100%;
+				}
+			}
+
+		}
+	
+	}
+
+	
+
+}
+
+// clearfix
+
+.clear:before,
+.clear:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear:after {
+    clear: both;
+}
+
+.clear {
+    *zoom: 1;
 }

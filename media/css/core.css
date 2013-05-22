@@ -29,7 +29,7 @@ body {
 }
 a,
 label.link {
-  color: #b1cf37;
+  color: #5fc9e5;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -185,10 +185,20 @@ h4 {
   margin: 0;
   padding: 28px 0;
 }
+#footer .support {
+  font-size: .8em;
+  width: 150px;
+  position: relative;
+}
+#footer .support img {
+  position: absolute;
+  right: -100px;
+  top: 15px;
+}
 #home,
 #footer .footnote a {
   display: block;
-  width: 300px;
+  width: 474px;
   height: 80px;
   background: url("../images/logo.png");
   text-indent: -100%;
@@ -216,6 +226,13 @@ h4 {
 #footer nav li {
   float: left;
   margin-left: 1.5em;
+}
+#contact .error {
+  color: red;
+  margin-bottom: 15px;
+}
+#navigation {
+  margin-right: 20px;
 }
 @media all and (max-width: 1000px) {
   #header nav,
@@ -247,20 +264,22 @@ div[role=main] h1 {
   font-size: 2.5em;
   text-align: center;
   color: #757575;
+  font-weight: normal;
 }
 div[role=main] h2 {
-  font-size: 1.8em;
+  font-size: 2em;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: normal;
   padding-top: 140px;
 }
 div[role=main] p.subheading {
-  max-width: 400px;
+  max-width: 450px;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 40px;
+  font-size: 1.4em;
 }
 div[role=main] nav {
   max-width: 700px;
@@ -268,13 +287,13 @@ div[role=main] nav {
 }
 div[role=main] nav a {
   background: #efefef;
-  font-weight: bold;
+  font-weight: normal;
   padding-top: 140px;
   padding-bottom: 10px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  width: 30%;
+  width: 29%;
   margin-right: 1%;
   margin-left: 1%;
   display: inline-block;
@@ -282,6 +301,35 @@ div[role=main] nav a {
   text-align: center;
   color: #221f20;
   font-size: 32px;
+  -webkit-transition-property: all, -webkit-transform;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -moz-transition-property: all, -moz-transform;
+  -moz-transition-duration: 0.2s, 0.2s;
+  -ms-transition-property: all, -ms-transform;
+  -ms-transition-duration: 0.2s, 0.2s;
+  -o-transition-property: all, -o-transform;
+  -o-transition-duration: 0.2s, 0.2s;
+  transition-property: all, transform;
+  transition-duration: 0.2s, 0.2s;
+  animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  border: 5px solid rgba(0, 0, 0, 0);
+}
+div[role=main] nav a:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+}
+div[role=main] nav a.learn:hover {
+  border: 5px solid #5fc9e5;
+}
+div[role=main] nav a.design:hover {
+  border: 5px solid #b1cf37;
+}
+div[role=main] nav a.code:hover {
+  border: 5px solid #f48123;
 }
 div[role=main] nav a span {
   display: block;
@@ -511,6 +559,30 @@ div[role=main] #learn ul.links a span {
 div[role=main] #learn ul.links a:hover {
   border: 2px solid #5fc9e5;
 }
+div[role=main] #learn a.top {
+  background-image: url('../images/top_blue.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #learn a.top {
+    background-image: url('../images/top_blue@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #learn a.top {
+    background-image: url('../images/top_blue@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
 div[role=main] #design {
   border-top: 6px solid #b1cf37;
 }
@@ -588,6 +660,30 @@ div[role=main] #design ul.links a span {
 }
 div[role=main] #design ul.links a:hover {
   border: 2px solid #b1cf37;
+}
+div[role=main] #design a.top {
+  background-image: url('../images/top_green.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #design a.top {
+    background-image: url('../images/top_green@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #design a.top {
+    background-image: url('../images/top_green@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
 }
 div[role=main] #code {
   border-top: 6px solid #f48123;
@@ -667,17 +763,163 @@ div[role=main] #code ul.links a span {
 div[role=main] #code ul.links a:hover {
   border: 2px solid #f48123;
 }
+div[role=main] #code a.top {
+  background-image: url('../images/top_orange.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #code a.top {
+    background-image: url('../images/top_orange@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #code a.top {
+    background-image: url('../images/top_orange@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
 div[role=main] #news {
-  border-top: 6px solid #58585a;
+  border-top: 6px solid #073a5a;
+}
+div[role=main] #news:after {
+  clear: left;
+}
+div[role=main] #news a {
+  color: #073a5a;
 }
 div[role=main] #news h2 {
   padding-top: 0;
 }
+div[role=main] #news h3 {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  font-size: 1.6em;
+}
+div[role=main] #news a.top {
+  background-image: url('../images/top_navy.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #news a.top {
+    background-image: url('../images/top_navy@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  div[role=main] #news a.top {
+    background-image: url('../images/top_navy@2x.png');
+    background-size: 52px 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+}
+div[role=main] #news .blog {
+  -webkit-box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 500px;
+  float: left;
+  margin-right: 30px;
+}
+div[role=main] #news .blog ul {
+  margin: 0;
+  padding: 0;
+}
+div[role=main] #news .blog li {
+  list-style: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 150px;
+  position: relative;
+  font-size: .9em;
+}
+div[role=main] #news .blog li a {
+  font-size: 1.1em;
+}
+div[role=main] #news .blog li:first-child {
+  padding-top: 0;
+}
+div[role=main] #news .blog li:first-child small {
+  top: 0;
+}
+div[role=main] #news .blog li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+div[role=main] #news .blog li small {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  font-weight: bold;
+  font-size: .9em;
+  width: 100px;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+div[role=main] #news .tweets {
+  -webkit-box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 250px;
+  float: left;
+}
+div[role=main] #news .tweets ul {
+  margin: 0;
+  padding: 0;
+}
+div[role=main] #news .tweets li {
+  list-style: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: .9em;
+}
+div[role=main] #news .tweets li:first-child {
+  padding-top: 0;
+}
+div[role=main] #news .tweets li:first-child small {
+  top: 0;
+}
+div[role=main] #news .tweets li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
 div[role=main] section {
   background: #FFFFFF;
   padding: 50px 0 70px 0;
+  position: relative;
+}
+div[role=main] section a.top {
+  position: absolute;
+  display: block;
+  width: 104px;
+  height: 50px;
+  top: 0;
+  right: 0;
 }
 div[role=main] section:nth-child(even) {
+  background-image: url(../images/fabric_1.png);
   background-image: url('../images/fabric_1.png');
   background-position: top left;
   background-repeat: repeat;
@@ -709,7 +951,7 @@ div[role=main] ul.links {
 div[role=main] ul.links li {
   list-style: none;
   display: inline-block;
-  margin: 0 10px 15px 10px;
+  margin: 0 4px 15px 3px;
   padding: 0;
   width: 300px;
   font-size: .9em;
@@ -720,6 +962,7 @@ div[role=main] ul.links li a {
   text-align: left;
   display: block;
   color: #221f20;
+  background: rgba(0, 0, 0, 0.1);
   text-decoration: none;
   padding: 10px 15px 10px 40px;
   position: relative;
@@ -741,6 +984,11 @@ div[role=main] ul.links li a {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+div[role=main] ul.links li a:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  -moz-transform: scale(1.02);
+}
 div[role=main] ul.links li a span {
   display: block;
   width: 6px;
@@ -752,6 +1000,16 @@ div[role=main] ul.links li a span {
 div[role=main] .video {
   margin: 0 auto;
   text-align: center;
+}
+div[role=main] .column50 {
+  width: 46%;
+  display: inline-block;
+}
+div[role=main] .column50:nth-child(even) {
+  padding-left: 3%;
+}
+div[role=main] .column50:nth-child(odd) {
+  padding-right: 3%;
 }
 .embellished #content {
   background-image: url("../images/content-background.png");
@@ -1035,11 +1293,11 @@ ol.promo-list p {
 #meta .twitter-follow-button {
   margin-top: 10px;
 }
-#meta #text-3 {
-  width: 20%;
-}
-#meta #text-2 {
+#meta .widget:nth-child(2) {
   width: 30%;
+}
+#meta .widget:nth-child(3) {
+  width: 20%;
 }
 #meta h2 {
   font-family: "Open Sans", sans-serif;
@@ -1098,4 +1356,83 @@ ol.promo-list p {
     margin: 0 auto;
     padding-bottom: 0;
   }
+  #home,
+  #footer .footnote a {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 300px;
+    height: 50px;
+  }
+  #footer .footnote a {
+    background-position: 0 -50px;
+  }
+  div[role=main] h1 {
+    font-size: 1.8em;
+  }
+  div[role=main] .column50 {
+    width: 100%;
+    padding: 0 !important;
+  }
+  div[role=main] ul.links {
+    text-align: center;
+  }
+  div[role=main] #news .blog li {
+    padding-left: 0;
+  }
+  div[role=main] #news .blog li small {
+    position: relative;
+    display: block;
+  }
+  div[role=main] nav {
+    text-align: center;
+  }
+  div[role=main] nav a {
+    width: 120px;
+    margin-bottom: 20px;
+    background-size: 60%;
+    font-size: 1.1em;
+    padding-top: 140px;
+  }
+  div[role=main] .video iframe {
+    width: 100%;
+  }
+  div[role=main] #news .blog,
+  div[role=main] #news .tweets {
+    width: 70%;
+    float: none;
+  }
+  div[role=main] #news .blog {
+    margin-bottom: 30px;
+  }
+  div[role=main] ul.links {
+    margin: 0;
+    padding: 0;
+  }
+  div[role=main] ul.links li {
+    display: block;
+    width: 80%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  div[role=main] ul.links li a {
+    width: 100%;
+  }
+}
+.clear:before,
+.clear:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clear:after {
+  clear: both;
+}
+.clear {
+  *zoom: 1;
 }
