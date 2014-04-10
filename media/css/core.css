@@ -201,7 +201,7 @@ h4 {
   width: 474px;
   height: 80px;
   background: url("../images/logo.png");
-  text-indent: -100%;
+  text-indent: -1000%;
   overflow: hidden;
   margin-left: -14px;
 }
